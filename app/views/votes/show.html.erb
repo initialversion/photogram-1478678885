@@ -6,10 +6,18 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>User</dt>
-      <dd><%= @vote.user_id %></dd>
+      <dd>
+        <a href="/users/<%= @vote.user_id %>">
+          <%= vote.user.email %>
+        </a>
+      </dd>
 
       <dt>Photo</dt>
-      <dd><%= @vote.photo_id %></dd>
+      <dd>
+        <a href="/photos/<%= @vote.photo_id %>">
+          <%= vote.photo.caption %>
+        </a>
+      </dd>
 
     </dl>
 

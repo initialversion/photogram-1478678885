@@ -18,8 +18,16 @@
       <% @comments.each do |comment| %>
       <tr>
         <td><%= comment.body %></td>
-        <td><%= comment.commenter.email %></td>
-        <td><%= comment.photo.caption %></td>
+        <td>
+          <a href="/users/<%= comment.commenter.id %>">
+            <%= comment.commenter.email %>
+          </a>
+        </td>
+        <td>
+          <a href="/photos/<%= comment.photo.id %>">
+            <%= comment.photo.caption %>
+          </a>
+        </td>
         <td>
           <a href="/comments/<%= comment.id %>" class="btn btn-primary">Show</a>
           
